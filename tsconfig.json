@@ -3,6 +3,10 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": ".",                                   //Se define el . para que sea la base del path
+    "paths": {
+      "@environments/*": ["src/environments/*"]       //Se decalara el alias @environments/* para que apunte al path src
+    },
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
