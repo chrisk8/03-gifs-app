@@ -1,8 +1,9 @@
 <!-- El template se toma de Flowbite Tailwind
 https://flowbite.com/docs/components/gallery/  -->
 <div class="grid grid-cols sm:grid-cols-2 md:grid-cols-3 gap-4">
-    @for (url of urlList(); track url) {
-        <gifs-list-item [imageUrl]=" url " >  </gifs-list-item>
+    @for (gif of gifList(); track gif) {
+        <gifs-list-item [imageUrl]=" gif.url " >  </gifs-list-item>
     }
   
+
 </div>

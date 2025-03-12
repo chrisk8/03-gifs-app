@@ -5,5 +5,5 @@
     TODO: Utilizar un input para mostrar la imagen de la URL de la lista de urls
 -->
     <section class="py-3">
-        <gifs-list [urlList]="listUrls()" > </gifs-list>
+        <gifs-list [gifList]=" gifsService.gifsOnTrending() " ></gifs-list>
     </section>
