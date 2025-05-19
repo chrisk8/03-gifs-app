@@ -2,6 +2,11 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
+        path: 'footer',
+        loadComponent: () =>
+            import( './shared/basic-foot/basic-foot.component' )
+    },
+    {
         path: 'dashboard',
         loadComponent: () => 
             import( './gifs/pages/dashboard-page/dashboard-page.component' ),

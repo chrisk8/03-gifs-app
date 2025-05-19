@@ -1,1 +1,20 @@
-<p>search-page works!</p>,
+<h2 class="text-2xl font-bold mt-5">Buscador de GIFs</h2>
+<h3 class="text-sm text-gray-500">Aqui puedes buscar gifs escribiendo lo que necesitas.</h3>
+
+<!-- Se utiliza el evento (keyup) para disparar un evento cuando el usuario presiona una tecla
+(keyup.enter) para disprarar el evento cuando el usuario presiona enter.
+en este caso el evento es la funcion onSearch.
+Para obtener el valor del input, se crea la referencia local #txtSearch para obtener su valor con txtSearch.value -->
+<section class="flex flex-col gap-4">
+    <input type="text" placeholder="Buscar GIF" 
+            class="mt-3 border border-gray-300 rounded-md p-2"
+            (keyup.enter)=" onSearch( txtSearch.value )"
+            #txtSearch>
+
+
+</section>
+
+
+<section class="py-3">
+    <gifs-list [gifList]=" resultSearch() " ></gifs-list>
+</section>
